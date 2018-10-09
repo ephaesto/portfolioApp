@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import LinkList from "./linkList/LinkList"
 
 class Header extends Component {
 
   render() {
     return (
       <header>
-        <ul className="nav nav-tabs bg-dark">
-          <li className="nav-item">
-            <a className="nav-link active" href="#">Active</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Another link</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
+        <LinkList navLinks={this.props.navLinks} />
       </header>
     );
   }
 
 }
 
-export default Header;
+function mapStateToProps(state){
+  return{
+    navLinks : state.navLinks
+  }
+}
+export default connect(mapStateToProps) (Header);
