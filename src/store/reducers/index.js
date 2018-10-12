@@ -1,7 +1,11 @@
-import { combineReducers } from "redux";
-import NavLinksReducer from './navLinksReducer';
+import { combineReducers } from "redux"
+
+import ChangeNavReducer  from './changeNavReducer'
+import NavLinksReducer from './navLinksReducer'
+
 const rootReducer = combineReducers({
-  navLinks : NavLinksReducer,
+  nameNav : ChangeNavReducer,
+  navLinks : NavLinksReducer
 });
 
-export default rootReducer;
+export default rootReducer
