@@ -1,22 +1,40 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+
 import { withRouter } from 'react-router-dom'
 
-
-import{ selectNavEnvironment } from '../../store/actions/index'
 
 import LinkList from "./linkList/LinkList"
 
 class Header extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    heightNavbar : "",
+    showCollapse:"",
+  };
+}
 
+toggelHeightNavbar = () => {
+  if(this.state.heightNavbar ===""){
+    this.setState({heightNavbar : "heightNavbar", showCollapse:"show"});
+  }
+  if(this.state.heightNavbar ==="heightNavbar"){
+    this.setState({heightNavbar : "" , showCollapse:""});
+  }
+}
 
   render() {
     return (
-      <header className="nav nav-tabs bg-dark">
-        {console.log(this.props.navLinks)}
-        <LinkList navLinks={this.props.navLinks} />
-        <button className="nav-item nav-link" onClick={() => this.props.selectNavEnvironment("admin")} >test switch admin</button>
+      <header >
+        <nav className={`navbar navbar-expand-lg navbar-dark bg-light ${this.state.heightNavbar}`}>
+          <button onClick ={(e)=>this.toggelHeightNavbar()} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className={`collapse navbar-collapse ${this.state.showCollapse}`} id="navbarNav">
+            <LinkList  HeightNavbar={(e)=>this.toggelHeightNavbar()} navLinks={this.props.navLinks} />
+          </div>
+        </nav>
       </header>
     );
   }
@@ -29,8 +47,6 @@ function mapStateToProps(state){
     nameNav : state.nameNav
   }
 }
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({selectNavEnvironment:selectNavEnvironment},dispatch)
-}
 
-export default withRouter(connect(mapStateToProps,mapDispatchToProps) (Header))
+
+export default withRouter(connect(mapStateToProps) (Header))

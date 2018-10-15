@@ -1,1 +1,142 @@
 
+body {
+
+background: #ffa000;
+background: -moz-linear-gradient(45deg, #ffa000 42%, #ffd149 100%);
+background: -webkit-linear-gradient(45deg, #ffa000 42%,#ffd149 100%);
+background: linear-gradient(45deg, #ffa000 42%,#ffd149 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa000', endColorstr='#ffd149',GradientType=1 );
+
+font-family: 'Roboto', sans-serif;
+}
+
+body h1,body h2,body h3,body h4,body h5,body h6{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+header {
+  position: fixed;
+  width :100%;
+  left: 0px;
+  top:0px;
+  padding: 0.3rem;
+  height: 100%;
+  z-index: 999;
+
+}
+
+
+
+body .nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+body .navbar{
+  overflow: hidden;
+  border-radius: 0.3rem;
+  font-family: 'Bangers', cursive;
+  padding: 0;
+  align-items: flex-start;
+
+
+}
+ .heightNavbar{
+height: 100%;
+}
+
+
+body .nav-tabs .nav-link.active {
+  color: #494949;
+  background-color: #f4f4f4;
+  border-color: transparent;
+}
+
+body .nav-tabs .nav-link{
+  font-size: 2rem;
+  padding: 1rem 0.6rem;
+}
+
+body .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+  border-color: transparent;
+}
+
+body .nav-tabs .nav-link:hover{
+color :#f4f4f4;
+background-color: #ffa000;
+}
+
+body .navbar-dark .navbar-toggler {
+  background-color: #ffa000;
+  color: #f4f4f4;
+  margin: 0.45rem 1.6rem;
+  border-color: transparent;
+  height: 56px;
+  border-radius:100%;
+  box-shadow: 0 3px 7px #494949;
+
+}
+body .navbar-dark .navbar-toggler:hover {
+  box-shadow: 0 0 4px #494949;
+}
+body .nav-tabs .nav-item,body .nav-tabs .nav-link{
+  width: 100%;
+  text-align: center;
+}
+
+
+.title {
+  margin-top:80px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h1,.title p{
+  color: #f4f4f4;
+}
+.title h1{
+  color: #f4f4f4;
+  text-shadow: 0 5px 20px #494949;
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+
+}
+.title.accueil h1{
+  font-size: 7rem;
+}
+.title p{
+  font-size: 2rem;
+  text-shadow: 0 2px 10px #494949;
+}
+.imgAndText img{
+  width : 100%;
+}
+
+
+@media (min-width: 992px){
+  body .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+
+  }
+  body .navbar{
+    padding: 0 1rem;
+    height: auto;
+    align-items: center;
+
+  }
+  body .nav-tabs .nav-item,body .nav-tabs .nav-link{
+    width: auto;
+  }
+  body .nav-tabs .nav-link{
+    font-size: 1.5rem;
+    padding: 1rem 0.6rem;
+  }
+}

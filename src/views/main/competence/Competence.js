@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-
+import TitleMain from '../component/TitleMain'
 class Competence extends Component {
 
   render() {
     return (
       <main>
-        <h1>Compétence</h1>
+          <TitleMain title="Mes Compétence"  page='competence' />
       </main>
     );
   }
