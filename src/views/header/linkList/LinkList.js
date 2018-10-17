@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 
 const Linklist = ({navLinks,HeightNavbar}) => (
-  <ul className="nav nav-tabs nav-item">
+  <ul className="nav flexCenter nav-tabs nav-item">
     {
       navLinks.map((navLink) => {
         return (

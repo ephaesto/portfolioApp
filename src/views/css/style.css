@@ -6,7 +6,7 @@ background: -moz-linear-gradient(45deg, #ffa000 42%, #ffd149 100%);
 background: -webkit-linear-gradient(45deg, #ffa000 42%,#ffd149 100%);
 background: linear-gradient(45deg, #ffa000 42%,#ffd149 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa000', endColorstr='#ffd149',GradientType=1 );
-
+color: #494949;
 font-family: 'Roboto', sans-serif;
 }
 
@@ -14,26 +14,56 @@ body h1,body h2,body h3,body h4,body h5,body h6{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
-header {
-  position: fixed;
-  width :100%;
-  left: 0px;
-  top:0px;
-  padding: 0.3rem;
-  height: 100%;
-  z-index: 999;
 
-}
-
-
-
-body .nav {
+.flexCenter{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+
+header {
+  position: fixed;
+  width :100%;
+  left: 0;
+  top:0;
+  padding: 0.3rem;
+  z-index: 999;
 
 }
+
+footer{
+  background-color: #494949;
+  box-shadow: 0 -0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+
+}
+
+footer p{
+  text-align: center;
+  color: #f4f4f4;
+  font-weight: 700;
+  line-height: 2rem;
+  margin : 0;
+}
+
+footer a{
+  font-family: 'Bangers', cursive;
+  color: #ffa000;
+  letter-spacing: 0.1rem;
+  font-size : 1.2rem;
+
+}
+
+footer a:hover{
+  color:#ffd149;
+  text-decoration: none;
+
+}
+
 
 body .navbar{
   overflow: hidden;
@@ -41,6 +71,8 @@ body .navbar{
   font-family: 'Bangers', cursive;
   padding: 0;
   align-items: flex-start;
+  background-color: #f4f4f4;
+  box-shadow: 0 0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
 
 
 }
@@ -76,11 +108,11 @@ body .navbar-dark .navbar-toggler {
   border-color: transparent;
   height: 56px;
   border-radius:100%;
-  box-shadow: 0 3px 7px #494949;
+  box-shadow: 0 0.195rem 0.455rem rgba(73, 73, 73, 0.8);
 
 }
 body .navbar-dark .navbar-toggler:hover {
-  box-shadow: 0 0 4px #494949;
+  box-shadow: 0 0 0.26rem rgba(73, 73, 73, 0.8);
 }
 body .nav-tabs .nav-item,body .nav-tabs .nav-link{
   width: 100%;
@@ -89,8 +121,8 @@ body .nav-tabs .nav-item,body .nav-tabs .nav-link{
 
 
 .title {
-  margin-top:80px;
-  height: 600px;
+  margin-top:5rem;
+  height: 38rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -102,28 +134,112 @@ body .nav-tabs .nav-item,body .nav-tabs .nav-link{
 }
 .title h1{
   color: #f4f4f4;
-  text-shadow: 0 5px 20px #494949;
+  text-shadow: 0 0.325rem 1.3rem rgba(73, 73, 73, 0.8);
   font-family: 'Bangers', cursive;
   font-size: 5rem;
+  letter-spacing: 0.2rem;
 
 }
 .title.accueil h1{
   font-size: 7rem;
+  letter-spacing: 0.4rem;
 }
 .title p{
   font-size: 2rem;
-  text-shadow: 0 2px 10px #494949;
+  text-shadow: 0 0.13rem 0.65rem rgba(73, 73, 73, 0.8);
 }
-.imgAndText img{
+
+body .presentation,body .monPasse,body .monAvenir{
+  padding: 4rem 2.5rem;
+}
+
+.imgAndTextTwoColumn img{
   width : 100%;
 }
 
 
+.bgwhit{
+background-color: #f4f4f4;
+box-shadow: 0 0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
+position: relative;
+z-index: 3;
+}
+
+.bggrey{
+background-color: #e6e6e6;
+}
+
+
+.imgAndTextAvatar img{
+  height: 100%;
+  width : auto;
+  margin-left: -15%;
+}
+
+.imgAndTextAvatar .part1{
+  height: 18rem;
+  width: 18rem;
+  overflow: hidden;
+  border-radius:100rem;
+  background-color: #e6e6e6;
+  box-shadow: 0 0.26rem 0.65rem 0 rgba(73, 73, 73, 0.8);
+
+}
+
+
+.imgAndTextAvatar .part2 h2{
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.09rem;
+  padding-top: 4rem;
+}
+
+.imgAndTextTwoColumn h2{
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.09rem;
+  padding-top: 2.5rem;
+
+}
+
+.imgAndTextTwoColumn p{
+  padding-top: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+
+}
+.imgAndTextTwoColumn .part1{
+  padding: 0;
+  overflow: hidden;
+  border-radius:0.65rem;
+  box-shadow: 0 0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
+  background-color: #fff5d8;
+}
+
+.imgAndTextTwoColumn .part2{
+  padding: 0 2.5rem;
+
+
+}
+.imgAndTextTwoColumn img{
+  height: 100%;
+  width: auto;
+  margin-left: -15%;
+}
+
+
+
+
+
 @media (min-width: 992px){
-  body .nav {
+  body .nav.flexCenter {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap ;
+    width: 100%;
 
   }
   body .navbar{
@@ -138,5 +254,9 @@ body .nav-tabs .nav-item,body .nav-tabs .nav-link{
   body .nav-tabs .nav-link{
     font-size: 1.5rem;
     padding: 1rem 0.6rem;
+  }
+
+  .imgAndTextTwoColumn .part1{
+    height : 21.125rem;
   }
 }

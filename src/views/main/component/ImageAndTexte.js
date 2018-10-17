@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 const ImageAndTexte = ({
   classSection="",
+  classContainer="",
   classRow="",
   classImg="",
-  classTexte="",
+  classText="",
   classLink="",
   img,
   altImg,
@@ -15,14 +16,16 @@ const ImageAndTexte = ({
   textLink="connexion",
 }) => (
   <section className={classSection}>
-    <div className={classRow}>
-      <div className={classImg}>
-        <img src={img} alt={altImg}/>
-      </div>
-      <div className={classTexte}>
-        <h2>{title}</h2>
-        {text ? <p>{text}</p> : ""}
-        {link ? <Link to={link} className={classLink}>{textLink}</Link> : ""}
+    <div className={classContainer}>
+      <div className={classRow}>
+        <div className={classImg}>
+          <img src={img} alt={altImg}/>
+        </div>
+        <div className={classText}>
+          <h2>{title}</h2>
+          {text ? <p>{text}</p> : ""}
+          {link ? <Link to={link} className={classLink}>{textLink}</Link> : ""}
+        </div>
       </div>
     </div>
   </section>

@@ -1,8 +1,10 @@
 import { SET_NAV_ENVIRONMENT } from "../actions/actionTypes"
 
 const initialState =  [
-    { name : "Accueil", link : "/", id:1  } ,
-    { name : "Compétence", link : "/competence", id:2 }
+    { name : "Bienvenue ", link : "/", id:1  } ,
+    { name : "Mes Compétence", link : "/competence", id:2 },
+    { name : "Mes Création", link : "/creation", id:3 },
+    { name : "Contactez-moi", link : "/contact", id:4 }
   ]
 
 
@@ -15,9 +17,11 @@ export default function NavLinksReducer(state = initialState, action){
         ]
       }else{
         return [
-          { name : "Accueil", link : "/", id:1  } ,
-          { name : "Compétence", link : "/competence", id:2 }
-        ]
+            { name : "Bienvenue ", link : "/", id:1  } ,
+            { name : "Mes Compétences", link : "/competence", id:2 },
+            { name : "Mes Créations", link : "/creation", id:3 },
+            { name : "Contactez-moi", link : "/contact", id:4 }
+          ]
       }
     default :
       return state

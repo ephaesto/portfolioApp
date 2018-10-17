@@ -26,8 +26,8 @@ toggelHeightNavbar = () => {
 
   render() {
     return (
-      <header >
-        <nav className={`navbar navbar-expand-lg navbar-dark bg-light ${this.state.heightNavbar}`}>
+      <header className={this.state.heightNavbar} >
+        <nav className={`navbar navbar-expand-lg navbar-dark  ${this.state.heightNavbar}`}>
           <button onClick ={(e)=>this.toggelHeightNavbar()} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
