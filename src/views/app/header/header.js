@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 
-import LinkList from "./linkList/LinkList"
+import LinkList from "./component/LinkList"
 
 class Header extends Component {
 constructor(props) {

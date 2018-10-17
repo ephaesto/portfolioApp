@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import './css/style.css';
 import { Route, Switch } from "react-router-dom"
 
-import Header from "./header/headerContainer"
-import Footer from "./footer/Footer"
-import Accueil from "./main/page/Accueil"
-import MentionsLegales from "./main/page/MentionsLegales"
+import Header from "./app/header/header"
+import Footer from "./app/footer/Footer"
+import Accueil from "./app/main/page/Accueil"
+import MentionsLegales from "./app/main/page/MentionsLegales"
 
-import Competence from "./main/page/Competence"
-import Creation from "./main/page/Creation"
-import Contact from "./main/page/Contact"
+import Competence from "./app/main/page/Competence"
+import Creation from "./app/main/page/Creation"
+import Contact from "./app/main/page/Contact"
 
 
 
