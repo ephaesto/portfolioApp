@@ -13,7 +13,7 @@ class Accueil extends Component {
           classRow = "flexCenter"
           classImg = "part1"
           classText = "part2"
-          img={require('../../../img/avatar.png')}
+          img='./img/avatar.png'
           altImg="une image pour tester"
           title="« je suis devenus dévellopeur pour pouvoir réaliser mes rêve et ne jamais arréter de créer et d'inventer le future. » "
         />
@@ -23,7 +23,7 @@ class Accueil extends Component {
           classRow = "row "
           classImg = "part1 col-md-4"
           classText= "part2 col-md-8"
-          img={require('../../../img/environement.svg')}
+          img='./img/environement.svg'
           altImg= "une image pour tester"
           title= "Un début dans les Sciences"
           text= "Avant l'informatique j'était attiré par l'environement c'
@@ -42,7 +42,7 @@ class Accueil extends Component {
           classImg = "part1 col-md-4 order-last"
           classText = "part2 col-md-8"
           classLink = "btn btn-warning"
-          img = {require('../../../img/ordinateur.svg')}
+          img = './img/ordinateur.svg'
           altImg = "une image pour tester"
           title = "Une reconversion en develloppement web"
           text = "Après avoir découver ma vois , j'ai entamer une reconvertion
