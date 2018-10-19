@@ -1,4 +1,4 @@
-import { SET_NAV_ENVIRONMENT,GET_LIST_TECHNO,GET_LIST_CREATION} from "./actionTypes"
+import { SET_NAV_ENVIRONMENT,GET_LIST_TECHNO,GET_LIST_CREATION,GET_LIST_CREA_TO_TECH} from "./actionTypes"
 
 
 export function selectNavEnvironment(NavEnv){
@@ -18,5 +18,11 @@ export function getListTechno(){
 export function getListCreation(){
   return{
     type : GET_LIST_CREATION
+  }
+}
+
+export function getListCreaToTech(){
+  return{
+    type : GET_LIST_CREA_TO_TECH
   }
 }

@@ -129,6 +129,7 @@ body .nav-tabs .nav-item,body .nav-tabs .nav-link{
   align-items: center;
 }
 
+
 .title h1,.title p{
   color: #f4f4f4;
 }
@@ -232,6 +233,80 @@ background-color: #e6e6e6;
 
 
 
+
+.listTechno .titleTech h2{
+  padding: 3rem;
+  text-shadow: 0 0.325rem 1.3rem rgba(73, 73, 73, 0.8);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.2rem;
+  text-align: center;
+
+}
+
+.listTechno .contentMyCard{
+  padding: 2rem 1rem;
+}
+
+.listTechno .myCard {
+  padding: 2rem 0;
+  height: 100%;
+  border-radius: 0.65rem;
+  background-color: #e6e6e6;
+  box-shadow: 0 0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
+  position: relative;
+  z-index: 3;
+}
+
+.listTechno .myCard .part1{
+  height: 8.45rem;
+  width:  8.45rem;
+  overflow: hidden;
+  border-radius: 100rem;
+  box-shadow: 0 0.195rem 0.455rem rgba(73, 73, 73, 0.8);
+}
+
+.listTechno .myCard img{
+  width:  9rem;
+  margin: -0.275rem;
+}
+
+.listTechno .myCard .part2{
+  padding: 1.5rem 0;
+}
+
+.listTechno .myCard strong{
+  color:#ffa000 ;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+}
+
+.listTechno .myCard a{
+  text-transform:none;
+  color:#c67100;
+  margin: 0;
+  border-radius: 0.65rem;
+  width: 100%;
+  text-align: left;
+
+}
+
+.btn-warning:not(:disabled):not(.disabled):active,.listTechno .myCard a:focus, .listTechno .myCard a:active:focus, .listTechno .myCard a:active:hover,.listTechno .myCard a:hover{
+  text-transform:none;
+  color:#f4f4f4 ;
+  background-color: #ffa000;
+  border-radius: 0.65rem;
+  border-color: transparent;
+}
+
+.containerListLink{
+  border-radius: 0.65rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: 0.325rem;
+}
 
 
 @media (min-width: 992px){

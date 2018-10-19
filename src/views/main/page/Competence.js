@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { getListTechno,getListCreation } from '../../../store/actions/index'
+import { getListTechno,getListCreation,getListCreaToTech } from '../../../store/actions/index'
 
 import TitleMain from '../component/TitleMain'
 import ListTechno from '../component/listTechno/ListTechno'
@@ -11,20 +11,33 @@ class Competence extends Component {
     super(props);
     this.props.getListTechno();
     this.props.getListCreation();
+    this.props.getListCreaToTech();
   }
 
-  StateListTechno = (listTechno,listLink,type) => {
+  StateListTechno = (listTechno,listLink,ListCreaToTech,type) => {
     listTechno = listTechno.filter((techno)=> techno.type === type)
 
     listTechno = listTechno.map((techno)=>{
-      let listLinks = listLink.filter((link)=>link.idTechno === techno.id)
-      if(listLinks){
-        techno.listLink = listLinks
-        return techno;
+      let ListCreaToTechs = ListCreaToTech.filter((CreaToTech)=>CreaToTech.idTechno === techno.id)
+      if(ListCreaToTechs.length !== 0){
+        let finalListLink = ListCreaToTechs.map((CreaToTech)=> {
+            let listLinks = listLink.filter((Link)=>CreaToTech.idCrea === Link.id)
+            return listLinks[0]
+          })
+        console.log(finalListLink)
+        if(finalListLink.length !== 0){
+          techno.listLink = finalListLink;
+          return techno
+        }else{
+          techno.listLink = null;
+          return techno
+        }
+
       }else{
         techno.listLink = null;
         return techno
       }
+
     })
     return listTechno
   }
@@ -35,23 +48,26 @@ class Competence extends Component {
           <ListTechno
             classSection =" listTechno backEnd"
             classContainer ="container"
-            classTitle ="backEndTitle"
+            classTitle ="backEndTitle bgwhit titleTech"
+            classCard ="col-md-6"
             title ="Mes technologie Back-End"
-            listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,"Back-end")}
+            listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,"Back-end")}
           />
           <ListTechno
             classSection =" listTechno frontEnd"
             classContainer ="container"
-            classTitle ="frontEndTitle"
+            classTitle ="frontEndTitle bgwhit titleTech"
+            classCard ="col-md-6"
             title ="Mes technologie Front-End"
-            listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,"Front-end")}
+            listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,"Front-end")}
           />
           <ListTechno
             classSection =" listTechno Webdesign"
             classContainer ="container"
-            classTitle ="webdesignTitle"
+            classTitle ="webdesignTitle bgwhit titleTech"
+            classCard ="col-md-6 col-lg-4 "
             title ="Mes technologie pour le Webdesign"
-            listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,"Webdesign")}
+            listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,"Webdesign")}
           />
       </main>
     );
@@ -62,12 +78,13 @@ class Competence extends Component {
 const mapStateToProps = state => {
   return{
     listTechno: state.listTechno,
-    listCreation: state.listCreation
+    listCreation: state.listCreation,
+    listCreaToTech: state.listCreaToTech
   }
 }
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({getListTechno:getListTechno,getListCreation:getListCreation},dispatch)
+  return bindActionCreators({getListTechno:getListTechno,getListCreation:getListCreation,getListCreaToTech:getListCreaToTech},dispatch)
 }
 
 export default connect(mapStateToProps,mapDispatchToProps) (Competence);
