@@ -21,8 +21,8 @@ class Accueil extends Component {
           classSection ="monPasse accueil imgAndTextTwoColumn bggrey"
           classContainer="container"
           classRow = "row "
-          classImg = "part1 col-md-4"
-          classText= "part2 col-md-8"
+          classImg = "part1 col-md-6 col-lg-4"
+          classText= "part2 col-md-6 col-lg-8"
           img='./img/environement.svg'
           altImg= "une image pour tester"
           title= "Un début dans les Sciences"
@@ -39,8 +39,8 @@ class Accueil extends Component {
           classSection = "monAvenir accueil imgAndTextTwoColumn bgwhit"
           classContainer="container"
           classRow = "row "
-          classImg = "part1 col-md-4 order-last"
-          classText = "part2 col-md-8"
+          classImg = "part1 col-md-6 col-lg-4"
+          classText = "part2 col-md-6 col-lg-8"
           classLink = "btn btn-warning"
           img = './img/ordinateur.svg'
           altImg = "une image pour tester"

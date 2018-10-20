@@ -15,16 +15,15 @@ class Competence extends Component {
   }
 
   StateListTechno = (listTechno,listLink,ListCreaToTech,type) => {
-    listTechno = listTechno.filter((techno)=> techno.type === type)
+    let listTechnos = listTechno.filter((techno)=> techno.type === type)
 
-    listTechno = listTechno.map((techno)=>{
+    listTechnos = listTechno.map((techno)=>{
       let ListCreaToTechs = ListCreaToTech.filter((CreaToTech)=>CreaToTech.idTechno === techno.id)
       if(ListCreaToTechs.length !== 0){
         let finalListLink = ListCreaToTechs.map((CreaToTech)=> {
             let listLinks = listLink.filter((Link)=>CreaToTech.idCrea === Link.id)
             return listLinks[0]
           })
-        console.log(finalListLink)
         if(finalListLink.length !== 0){
           techno.listLink = finalListLink;
           return techno
@@ -39,7 +38,7 @@ class Competence extends Component {
       }
 
     })
-    return listTechno
+    return listTechnos
   }
   render() {
     return (

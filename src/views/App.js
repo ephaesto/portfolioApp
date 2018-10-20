@@ -7,8 +7,9 @@ import Accueil from "./main/page/Accueil"
 import MentionsLegales from "./main/page/MentionsLegales"
 
 import Competence from "./main/page/Competence"
-import Creation from "./main/page/Creation"
 import Contact from "./main/page/Contact"
+import ListCreation from "./main/page/ListCreation"
+import Creation from "./main/page/Creation"
 
 
 
@@ -22,8 +23,9 @@ export default class App extends Component {
           <Route exact path="/mentions-legales" component={MentionsLegales}/>
 
           <Route exact path="/competence" component={Competence}/>
-          <Route exact path="/creation" component={Creation}/>
           <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/listCreation" component={ListCreation}/>
+          <Route exact path="/creation/:id" component={Creation}/>
 
         </Switch>
         <Footer />

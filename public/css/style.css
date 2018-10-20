@@ -308,8 +308,91 @@ background-color: #e6e6e6;
   padding: 0.325rem;
 }
 
+.containerListLink{
+  border-radius: 0.65rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: 0.325rem;
+}
+
+
+.ListCreation {
+  padding: 4rem 2.5rem;
+}
+
+.ListCreation:nth-child(even) {
+  background-color: #f4f4f4;
+  box-shadow: 0 0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
+  position: relative;
+  z-index: 3;
+}
+
+.ListCreation:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.ListCreation .part1{
+  height: 18rem;
+  padding: 0;
+  overflow: hidden;
+  border-radius:0.65rem;
+  box-shadow: 0 0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
+  background-color: #fff5d8;
+}
+
+.ListCreation .part2{
+  text-align: center;
+  padding: 0 2rem;
+}
+.ListCreation img{
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.ListCreation .row .part2 a{
+  color:#f4f4f4 ;
+  background-color: #ffa000;
+  border-radius: 0.65rem;
+}
+
+.ListCreation .row .part2 a:hover{
+  background-color: #ffd149;
+  border-radius: 0.65rem;
+}
+
+.ListCreation .row .part2 h2{
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.09rem;
+  padding-top: 2.5rem;
+}
+
+.ListCreation .row .part2 p{
+  padding-top: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+
+@media (min-width: 768px){
+  .ListCreation:nth-child(odd) .row {
+    flex-direction: row-reverse;
+  }
+
+  .monAvenir .row {
+    flex-direction: row-reverse;
+  }
+}
 
 @media (min-width: 992px){
+
+  .heightNavbar{
+ height: auto;
+ }
   body .nav.flexCenter {
     display: flex;
     flex-direction: row;

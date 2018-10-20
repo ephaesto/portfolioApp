@@ -1,7 +1,6 @@
 import React from 'react'
-import ListLink from "./ListLink"
 
-const Card = ({listTechno,classCard}) => (
+const Techno = ({listTechno,classCard}) => (
   <div className="row justify-content-center">
     {
       listTechno.map((techno) => {
@@ -13,9 +12,6 @@ const Card = ({listTechno,classCard}) => (
               </div>
               <div className="part2 flexCenter">
                 <h2>{techno.name}</h2>
-                <p><strong>{techno.level}</strong></p>
-                <p>{techno.exemple}</p>
-                { typeof techno.listLink !== "undefined"  && techno.listLink !== null ? <ListLink listLinks={techno.listLink}/> : ""}
               </div>
             </div>
           </div>
@@ -26,4 +22,4 @@ const Card = ({listTechno,classCard}) => (
   </div>
 )
 
-export default Card
+export default Techno

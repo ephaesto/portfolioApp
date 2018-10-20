@@ -1,10 +1,10 @@
-import { GET_LIST_CREATION } from "../actions/actionTypes"
+import { GET_LIST_TECHNO } from "../actions/actionTypes"
 
 
 
 export default function NavLinksReducer(state = [], action){
   switch(action.type){
-    case GET_LIST_CREATION :
+    case GET_LIST_TECHNO :
       return [
             { id:1,  name : "HTML 5", level : "Intermédiaire", exemple:null,type:"Front-end",img:'icon-html.svg',imgAlt:'logo du Html'},
             { id:2,  name : "CSS 3", level : "Intermédiaire", exemple:null,type:"Front-end",img:'icon-css.svg',imgAlt:'logo du Html'},
