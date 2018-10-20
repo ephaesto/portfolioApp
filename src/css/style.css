@@ -37,7 +37,7 @@ footer{
   background-color: #494949;
   box-shadow: 0 -0.065rem 0.325rem 0 rgba(73, 73, 73, 0.8);
   position: relative;
-  z-index: 3;
+  z-index: 50;
   padding: 2rem;
 
 }
@@ -291,6 +291,9 @@ background-color: #e6e6e6;
 
 }
 
+
+
+
 .btn-warning:not(:disabled):not(.disabled):active,.listTechno .myCard a:focus, .listTechno .myCard a:active:focus, .listTechno .myCard a:active:hover,.listTechno .myCard a:hover{
   text-transform:none;
   color:#f4f4f4 ;
@@ -377,6 +380,61 @@ background-color: #e6e6e6;
 }
 
 
+
+.listeTechnoCrea .myCard .part1{
+  height: 8.45rem;
+  width:  8.45rem;
+  overflow: hidden;
+  border-radius: 100rem;
+  box-shadow: 0 0.195rem 0.455rem rgba(73, 73, 73, 0.8);
+}
+
+.listeTechnoCrea .myCard img{
+  width:  9rem;
+  margin: -0.275rem;
+}
+
+.creation h2{
+  padding: 3rem;
+  text-shadow: 0 0.325rem 1.3rem rgba(73, 73, 73, 0.8);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.listeTechnoCrea h2{
+  color:#f4f4f4 ;
+}
+
+.listeTechnoCrea, .presentationCrea, .linkCrea{
+  padding: 2.5rem;
+}
+
+.presentationCrea p{
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.creation .row .part2 h3{
+  padding: 1.5rem 0;
+}
+
+body .linkCrea .container .btn{
+  color:#f4f4f4 ;
+  background-color: #ffa000;
+  border-radius: 0.65rem;
+  font-size: 1.2rem;
+  display: block;
+  width: 13rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+}
+
+body .linkCrea .container .btn:hover{
+  background-color: #ffd149;
+  border-radius: 0.65rem;
+}
 
 @media (min-width: 768px){
   .ListCreation:nth-child(odd) .row {

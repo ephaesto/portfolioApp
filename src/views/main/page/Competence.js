@@ -17,7 +17,7 @@ class Competence extends Component {
   StateListTechno = (listTechno,listLink,ListCreaToTech,type) => {
     let listTechnos = listTechno.filter((techno)=> techno.type === type)
 
-    listTechnos = listTechno.map((techno)=>{
+    listTechnos = listTechnos.map((techno)=>{
       let ListCreaToTechs = ListCreaToTech.filter((CreaToTech)=>CreaToTech.idTechno === techno.id)
       if(ListCreaToTechs.length !== 0){
         let finalListLink = ListCreaToTechs.map((CreaToTech)=> {

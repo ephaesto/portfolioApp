@@ -47,11 +47,31 @@ class Creation extends Component {
 
   render() {
     let MyCreation = this.StateListCreation(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,this.props.match.params.id)
+    if(typeof MyCreation === "undefined"){
+      MyCreation = {
+        title:"",
+        name:"",
+        text:"",
+        listTechno:[],
+        link:null,
+        git:null
+      }
+    }
+    let links = () =>{return ""};
+    if(MyCreation.link !== null || MyCreation.git !== null){
+      links = () =>{return (<TitleAndOneOther
+      classSection="creation linkCrea bgwhit"
+      classContainer ="container"
+      title="Voir le rendu du projet"
+      link={MyCreation.link}
+      git={MyCreation.git} / >) }
+    };
+
     return (
       <main>
-          <TitleMain title={MyCreation.title}  page='creation' />
+          <TitleMain title={typeof MyCreation !== "undefined" ? MyCreation.title : ""}  page='creation' />
           <TitleAndOneOther
-            classSection="creation presentationCrea"
+            classSection="creation presentationCrea bgwhit"
             classContainer ="container"
             title={`Présentation du projet ${MyCreation.name}`}
             text={MyCreation.text}
@@ -64,13 +84,7 @@ class Creation extends Component {
             title="Les technologies choisis"
             listTechno={MyCreation.listTechno}
           />
-          <TitleAndOneOther
-            classSection="creation linkCrea"
-            classContainer ="container"
-            title="Voir le rendu du projet"
-            link={MyCreation.link}
-            git={MyCreation.git}
-          />
+          {links()}
 
       </main>
     );

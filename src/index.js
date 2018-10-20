@@ -11,6 +11,8 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './views/App';
 import reducers from "./store/reducers";
 
+import './css/style.css';
+
 
 
 
