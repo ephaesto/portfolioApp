@@ -1,9 +1,35 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import {getAcceuil} from '../../../store/actions/index'
+
 import TitleMain from '../component/TitleMain'
 import ImageAndTexte from '../component/ImageAndTexte'
+
 class Accueil extends Component {
 
+  constructor(props) {
+    super(props);
+    this.props.getAcceuil();
+  }
+
   render() {
+    let AccueilValues = this.props.AccueilValue[0]
+    if(typeof AccueilValues === "undefined"){
+      AccueilValues = { id:"",
+        titlePresentation : "",
+        imgPresentation:"",
+        altImgPresentation:"",
+        titleMonPasse :"",
+        imgMonPasse:"",
+        altImgMonPasse:"",
+        textMonPasse:"",
+        titleMonAvenir :"",
+        imgMonAvenir:"",
+        altImgMonAvenir:"",
+        textMonAvenir:""
+      }}
     return (
       <main>
         <TitleMain title="Emeric Lebbrecht" subtitle="Bienvenu sur mon portfolio" page='accueil' />
@@ -13,9 +39,9 @@ class Accueil extends Component {
           classRow = "flexCenter"
           classImg = "part1"
           classText = "part2"
-          img='./img/avatar.png'
-          altImg="une image pour tester"
-          title="« je suis devenus dévellopeur pour pouvoir réaliser mes rêve et ne jamais arréter de créer et d'inventer le future. » "
+          img={AccueilValues.imgPresentation}
+          altImg={AccueilValues.altImgPresentation}
+          title={AccueilValues.titlePresentation }
         />
         <ImageAndTexte
           classSection ="monPasse accueil imgAndTextTwoColumn bggrey"
@@ -23,17 +49,10 @@ class Accueil extends Component {
           classRow = "row "
           classImg = "part1 col-md-6 col-lg-4"
           classText= "part2 col-md-6 col-lg-8"
-          img='./img/environement.svg'
-          altImg= "une image pour tester"
-          title= "Un début dans les Sciences"
-          text= "Avant l'informatique j'était attiré par l'environement c'
-          est pourquoi je voulais faire deux BTS un dans l'aquaculture et
-           l'autre en Gestion protection de la nature(GPN). Ces année m'ont
-           permis d'apprendre : la démarche scientifique et la gestion analitique.
-           J'ai pu aussi rencontré des chef d'entreprise qui ce posait beaucoup
-           de question sur le monde du numérique et les possibilité du web.
-           Cette expériance enrichissante a pris fin mais fait découvrir
-           le monde de l'informatique. "
+          img= {AccueilValues.imgMonPasse}
+          altImg= {AccueilValues.altImgMonPasse}
+          title= {AccueilValues.titleMonPasse }
+          text= {AccueilValues.textMonPasse}
         />
         <ImageAndTexte
           classSection = "monAvenir accueil imgAndTextTwoColumn bgwhit"
@@ -42,18 +61,10 @@ class Accueil extends Component {
           classImg = "part1 col-md-6 col-lg-4"
           classText = "part2 col-md-6 col-lg-8"
           classLink = "btn btn-warning"
-          img = './img/ordinateur.svg'
-          altImg = "une image pour tester"
-          title = "Une reconversion en develloppement web"
-          text = "Après avoir découver ma vois , j'ai entamer une reconvertion
-           dans le develloppement web. J'ai d'abord checher a me former en webdesign
-           pour pouvoir créer des interface cohérente. En suite cete anné
-           je cherche a dévelloper des compétence en back-end avec Symfony4 et
-           en front-end avec React.js. Le javascript a été une véritable révélation
-            et je pense en faire mon language de prédilection. J'aimeris aussi me
-            former en UX design pour completer mes compétence et avoir un profils
-            transversale capable d'avoir un bon recule technique pour prendre de
-             bonne decision face a un produit."
+          img = {AccueilValues.imgMonAvenir}
+          altImg = {AccueilValues.altImgMonAvenir}
+          title = {AccueilValues.titleMonAvenir}
+          text = {AccueilValues.textMonAvenir}
 
         />
       </main>
@@ -62,4 +73,14 @@ class Accueil extends Component {
 
 }
 
-export default Accueil;
+const mapStateToProps = state => {
+  return{
+    AccueilValue: state.AccueilValue
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({getAcceuil:getAcceuil},dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps) (Accueil);

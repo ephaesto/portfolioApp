@@ -2,7 +2,7 @@ import { GET_LIST_CREATION  } from "../actions/actionTypes"
 
 
 
-export default function NavLinksReducer(state = [], action){
+export default function ListCreationReducer(state = [], action){
   switch(action.type){
     case GET_LIST_CREATION :
       return [

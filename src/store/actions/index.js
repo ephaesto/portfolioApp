@@ -1,4 +1,4 @@
-import { SET_NAV_ENVIRONMENT,GET_LIST_TECHNO,GET_LIST_CREATION,GET_LIST_CREA_TO_TECH,SUBMIT_EMAIL_CONTACT} from "./actionTypes"
+import { SET_NAV_ENVIRONMENT,GET_LIST_TECHNO,GET_LIST_CREATION,GET_LIST_CREA_TO_TECH,SUBMIT_EMAIL_CONTACT,GET_ACCUEIL} from "./actionTypes"
 
 
 export function selectNavEnvironment(NavEnv){
@@ -32,5 +32,12 @@ export function submitEmailContact(credentials){
   console.log(credentials)
   return{
     type : SUBMIT_EMAIL_CONTACT
+  }
+}
+
+
+export function getAcceuil(){
+  return{
+    type : GET_ACCUEIL
   }
 }
