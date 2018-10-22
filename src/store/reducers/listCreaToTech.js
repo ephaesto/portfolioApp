@@ -10,8 +10,7 @@ export default function NavLinksReducer(state = [], action){
             { id:2,idTechno : 2,idCrea : 3},
             { id:3,idTechno : 4,idCrea : 4},
             { id:4,idTechno : 6,idCrea : 1},
-            { id:3,idTechno : 5,idCrea : 2},
-            { id:4,idTechno : 5,idCrea : 3}
+            { id:3,idTechno : 5,idCrea : 2}
           ]
 
     default :

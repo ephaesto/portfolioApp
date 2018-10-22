@@ -1,4 +1,3 @@
-
   import React from 'react';
   import { Field } from 'redux-form';
   import FieldInput from "./component/FieldInput"
@@ -14,7 +13,7 @@
     <section className={classSection}>
       <div className={classContainer}>
           <h2>{title}</h2>
-          <form onSubmit={(e)=>handleSubmit()}>
+          <form onSubmit={handleSubmit()}>
               <Field
                   name={fieldsContact.name}
                   component={FieldInput}

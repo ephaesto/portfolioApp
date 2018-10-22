@@ -12,7 +12,7 @@ const Card = ({listTechno,classCard}) => (
                 <img src={techno.img} alt={techno.imgAlt}/>
               </div>
               <div className="part2 flexCenter">
-                <h2>{techno.name}</h2>
+                <h3>{techno.name}</h3>
                 <p><strong>{techno.level}</strong></p>
                 <p>{techno.exemple}</p>
                 { typeof techno.listLink !== "undefined"  && techno.listLink !== null ? <ListLink listLinks={techno.listLink}/> : ""}

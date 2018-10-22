@@ -48,13 +48,14 @@ footer p{
   font-weight: 700;
   line-height: 2rem;
   margin : 0;
+  font-size : 0.7rem;
 }
 
 footer a{
   font-family: 'Bangers', cursive;
   color: #ffa000;
   letter-spacing: 0.1rem;
-  font-size : 1.2rem;
+  font-size : 1.1rem;
 
 }
 
@@ -88,7 +89,7 @@ body .nav-tabs .nav-link.active {
 }
 
 body .nav-tabs .nav-link{
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 1rem 0.6rem;
 }
 
@@ -122,11 +123,13 @@ body .nav-tabs .nav-item,body .nav-tabs .nav-link{
 
 .title {
   margin-top:5rem;
-  height: 38rem;
+  height: 28rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 2.5rem;
 }
 
 
@@ -137,26 +140,23 @@ body .nav-tabs .nav-item,body .nav-tabs .nav-link{
   color: #f4f4f4;
   text-shadow: 0 0.325rem 1.3rem rgba(73, 73, 73, 0.8);
   font-family: 'Bangers', cursive;
-  font-size: 5rem;
+  font-size: 3.5rem;
   letter-spacing: 0.2rem;
 
 }
 .title.accueil h1{
-  font-size: 7rem;
-  letter-spacing: 0.4rem;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
 }
 .title p{
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-shadow: 0 0.13rem 0.65rem rgba(73, 73, 73, 0.8);
 }
 
 body .presentation,body .monPasse,body .monAvenir{
-  padding: 4rem 2.5rem;
+  padding: 4rem 1rem;
 }
 
-.imgAndTextTwoColumn img{
-  width : 100%;
-}
 
 
 .bgwhit{
@@ -173,13 +173,12 @@ background-color: #e6e6e6;
 
 .imgAndTextAvatar img{
   height: 100%;
-  width : auto;
-  margin-left: -15%;
+  margin-left : -15%;
 }
 
 .imgAndTextAvatar .part1{
-  height: 18rem;
-  width: 18rem;
+  height: 13rem;
+  width: 13rem;
   overflow: hidden;
   border-radius:100rem;
   background-color: #e6e6e6;
@@ -190,15 +189,15 @@ background-color: #e6e6e6;
 
 .imgAndTextAvatar .part2 h2{
   font-family: 'Bangers', cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
-  letter-spacing: 0.09rem;
+  letter-spacing: 0.03rem;
   padding-top: 4rem;
 }
 
 .imgAndTextTwoColumn h2{
   font-family: 'Bangers', cursive;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   letter-spacing: 0.09rem;
   padding-top: 2.5rem;
@@ -207,12 +206,13 @@ background-color: #e6e6e6;
 
 .imgAndTextTwoColumn p{
   padding-top: 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 
 
 }
 .imgAndTextTwoColumn .part1{
+  height: 14.5rem;
   padding: 0;
   overflow: hidden;
   border-radius:0.65rem;
@@ -221,30 +221,32 @@ background-color: #e6e6e6;
 }
 
 .imgAndTextTwoColumn .part2{
-  padding: 0 2.5rem;
-
+  padding: 0 1rem;
 
 }
 .imgAndTextTwoColumn img{
   height: 100%;
   width: auto;
-  margin-left: -15%;
+  display: block;
+  margin:0 auto;
+
 }
 
 
 
 
 .listTechno .titleTech h2{
-  padding: 3rem;
+  padding: 1.5rem;
   text-shadow: 0 0.325rem 1.3rem rgba(73, 73, 73, 0.8);
   font-family: 'Bangers', cursive;
   letter-spacing: 0.2rem;
   text-align: center;
+  font-size: 1.5rem;
 
 }
 
 .listTechno .contentMyCard{
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .listTechno .myCard {
@@ -258,15 +260,15 @@ background-color: #e6e6e6;
 }
 
 .listTechno .myCard .part1{
-  height: 8.45rem;
-  width:  8.45rem;
+  height: 6.45rem;
+  width:  6.45rem;
   overflow: hidden;
   border-radius: 100rem;
   box-shadow: 0 0.195rem 0.455rem rgba(73, 73, 73, 0.8);
 }
 
 .listTechno .myCard img{
-  width:  9rem;
+  width:  7rem;
   margin: -0.275rem;
 }
 
@@ -274,10 +276,14 @@ background-color: #e6e6e6;
   padding: 1.5rem 0;
 }
 
+.listTechno .myCard h3{
+  font-size: 1.5rem;
+}
+
 .listTechno .myCard strong{
   color:#ffa000 ;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 
 }
 
@@ -288,6 +294,7 @@ background-color: #e6e6e6;
   border-radius: 0.65rem;
   width: 100%;
   text-align: left;
+  white-space: normal;
 
 }
 
@@ -309,6 +316,7 @@ background-color: #e6e6e6;
   flex-direction: column;
   align-items:flex-start;
   padding: 0.325rem;
+  max-width: 14.44rem;
 }
 
 .containerListLink{
@@ -322,7 +330,7 @@ background-color: #e6e6e6;
 
 
 .ListCreation {
-  padding: 4rem 2.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .ListCreation:nth-child(even) {
@@ -337,7 +345,6 @@ background-color: #e6e6e6;
 }
 
 .ListCreation .part1{
-  height: 18rem;
   padding: 0;
   overflow: hidden;
   border-radius:0.65rem;
@@ -347,10 +354,11 @@ background-color: #e6e6e6;
 
 .ListCreation .part2{
   text-align: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 .ListCreation img{
-  height: 100%;
+  height: auto;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -374,31 +382,36 @@ background-color: #e6e6e6;
 }
 
 .ListCreation .row .part2 p{
-  padding-top: 2.5rem;
-  font-size: 1.2rem;
+  padding-top: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 
 
 .listeTechnoCrea .myCard .part1{
-  height: 8.45rem;
-  width:  8.45rem;
+  height: 6.45rem;
+  width:  6.45rem;
   overflow: hidden;
   border-radius: 100rem;
   box-shadow: 0 0.195rem 0.455rem rgba(73, 73, 73, 0.8);
 }
 
 .listeTechnoCrea .myCard img{
-  width:  9rem;
+  width:  7rem;
   margin: -0.275rem;
 }
 
+.listeTechnoCrea .myCard h3{
+  font-size: 1.5rem;
+}
+
 .creation h2{
-  padding: 3rem;
+  padding: 1.5rem;
   text-shadow: 0 0.325rem 1.3rem rgba(73, 73, 73, 0.8);
   font-family: 'Bangers', cursive;
   letter-spacing: 0.2rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 .listeTechnoCrea h2{
@@ -406,12 +419,12 @@ background-color: #e6e6e6;
 }
 
 .listeTechnoCrea, .presentationCrea, .linkCrea{
-  padding: 2.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .presentationCrea p{
-  padding-top: 2rem;
-  font-size: 1.2rem;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -423,18 +436,290 @@ body .linkCrea .container .btn{
   color:#f4f4f4 ;
   background-color: #ffa000;
   border-radius: 0.65rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: block;
-  width: 13rem;
+  width: 11rem;
   margin: 0 auto;
   margin-bottom: 1rem;
 
 }
 
-body .linkCrea .container .btn:hover{
+body .linkCrea .container .btn:hover,
+body .linkCrea .container .btn:active,
+body .linkCrea .container .btn:focus,
+body .linkCrea .container .btn:active:hover{
   background-color: #ffd149;
   border-radius: 0.65rem;
 }
+
+body form{
+  margin: 0;
+}
+
+body .fromContact {
+  padding: 0.625rem;
+}
+
+body .fromContact h2{
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.09rem;
+  padding-top: 2.5rem;
+}
+
+body .fromContact label{
+  padding-top: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+body .fromContact .container .btn{
+  color:#f4f4f4 ;
+  background-color: #ffa000;
+  border-radius: 0.65rem;
+  font-size: 1.2rem;
+  display: block;
+  width: 13rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+
+}
+
+body .fromContact  .container .btn:hover,
+body .fromContact  .container .btn:active,
+body .fromContact  .container .btn:focus,
+body .fromContact  .container .btn:active:hover{
+  background-color: #ffd149;
+  border-radius: 0.65rem;
+}
+
+body .fromContact  .container .form-control{
+  background-image: none;
+  background-color: #e6e6e6;
+  border-radius: 0.65rem;
+  padding: 0.4375rem 1rem;
+
+}
+
+body .fromContact  .container textarea.form-control{
+  height: 18.75rem;
+}
+
+body .fromContact  .container .error {
+  color:#ffa000 ;
+  font-weight: 500;
+
+}
+
+body .fromContact  .container .error .badge-primary{
+  color:#f4f4f4 ;
+  background-color: #ffa000;
+  margin-right: 0.65rem
+}
+
+body .MentionslegalesText {
+  padding: 0.625rem;
+}
+
+
+
+body .MentionslegalesText  h2{
+  font-size: 1.5rem;
+  letter-spacing: 0.005rem;
+  padding: 2.5rem 0;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.2rem;
+}
+
+body .MentionslegalesText  h2 span{
+  color:#ffa000 ;
+}
+
+body .MentionslegalesText  a{
+  color:#ffa000 ;
+  font-weight: 500;
+}
+
+body .MentionslegalesText  a:hover,
+body .MentionslegalesText  a:active,
+body .MentionslegalesText  a:focus,
+body .MentionslegalesText  a:active:hover{
+  color:#ffd149;
+  text-decoration: none;
+
+}
+
+@media (min-width: 600px){
+  footer p{
+    font-size : 1rem;
+  }
+
+  footer a{
+    letter-spacing: 0.1rem;
+    font-size : 1.2rem;
+
+  }
+
+  body .nav-tabs .nav-link{
+    font-size: 2rem;
+  }
+  .title {
+    height: 38rem;
+  }
+  .title h1{
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+
+  }
+
+  .title.accueil h1{
+    font-size: 7rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .title p{
+    font-size: 2rem;
+    text-shadow: 0 0.13rem 0.65rem rgba(73, 73, 73, 0.8);
+  }
+
+  body .presentation,body .monPasse,body .monAvenir{
+    padding: 4rem 2.5rem;
+  }
+  .imgAndTextAvatar .part1{
+    height: 18rem;
+    width: 18rem;
+  }
+
+  .imgAndTextAvatar .part2 h2{
+    font-size: 2rem;
+    letter-spacing: 0.09rem;
+  }
+  .imgAndTextTwoColumn .part1{
+    height: 24.75rem;
+
+  }
+  .imgAndTextTwoColumn img{
+    height: 100%;
+    width: auto;
+    margin-left: -15%;
+  }
+
+  .imgAndTextTwoColumn .part2{
+    padding: 0 2.5rem;
+
+  }
+
+  .imgAndTextTwoColumn p{
+    font-size: 1.2rem;
+  }
+  .imgAndTextTwoColumn h2{
+
+    font-size: 2rem;
+  }
+  .listTechno .titleTech h2{
+    padding: 3rem;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+
+  }
+
+  .listTechno .contentMyCard{
+    padding: 2rem 1rem;
+  }
+  .listTechno .myCard .part1{
+    height: 8.45rem;
+    width:  8.45rem;
+
+  }
+
+  .listTechno .myCard img{
+    width:  9rem;
+  }
+  .listTechno .myCard h3{
+    font-size: 2rem;
+  }
+
+  .listTechno .myCard strong{
+    font-size: 1.3rem;
+
+  }
+
+  .containerListLink{
+    max-width:none;
+  }
+
+  .ListCreation {
+    padding: 4rem 2.5rem;
+  }
+
+  .ListCreation .part1{
+    height: 18rem;
+  }
+
+  .ListCreation img{
+    height: 100%;
+    width: auto;
+  }
+
+  .ListCreation .part2{
+    padding: 0 2rem;
+  }
+
+  .ListCreation .row .part2 p{
+    padding-top: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  body .fromContact {
+    padding: 2.5rem;
+  }
+
+  body .MentionslegalesText {
+    padding: 2.5rem;
+  }
+  body .MentionslegalesText  h2{
+    font-size: 2rem;
+    letter-spacing: 0.09rem;
+    padding-left: 1rem ;
+  }
+
+  .listeTechnoCrea, .presentationCrea, .linkCrea{
+    padding: 2.5rem;
+  }
+
+  .creation h2{
+    padding: 3rem;
+    letter-spacing: 0.2rem;
+    font-size: 2rem
+  }
+
+  .presentationCrea p{
+    padding-top: 2rem;
+    font-size: 1.2rem;
+  }
+
+
+  .listeTechnoCrea .myCard .part1{
+    height: 8.45rem;
+    width:  8.45rem;
+  }
+
+  .listeTechnoCrea .myCard img{
+    width:  9rem;
+  }
+
+  .listeTechnoCrea .myCard h3{
+    font-size: 2rem;
+  }
+
+  body .linkCrea .container .btn{
+    font-size: 1.2rem;
+    width: 13rem;
+
+  }
+}
+
 
 @media (min-width: 768px){
   .ListCreation:nth-child(odd) .row {
@@ -444,9 +729,35 @@ body .linkCrea .container .btn:hover{
   .monAvenir .row {
     flex-direction: row-reverse;
   }
+
+  .imgAndTextTwoColumn .part1{
+    height: auto;
+  }
+
+  .imgAndTextTwoColumn img{
+    height: 100%;
+    width: auto;
+    margin-left: -15%;
+  }
+  body .monPasse img{
+    margin-left: -130%;
+  }
+  body .monAvenir img{
+    margin-left: -130%;
+  }
+
+
+
 }
 
 @media (min-width: 992px){
+
+  body .monPasse img{
+    margin-left: -20%;
+  }
+  body .monAvenir img{
+    margin-left: -20%;
+  }
 
   .heightNavbar{
  height: auto;

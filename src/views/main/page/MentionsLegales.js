@@ -1,9 +1,11 @@
 import React from 'react'
 import TitleMain from '../component/TitleMain'
+import MentionslegalesText from '../component/MentionslegalesText'
 
 const MentionsLegales = () => (
   <main>
-      <TitleMain title="Mes Mentions Légales"  page='mentionsLegales' />
+      <TitleMain title="Les Mentions Légales"  page='mentionsLegales' />
+      <MentionslegalesText classSection="MentionslegalesText bgwhit" classContainer="container" />
   </main>
 )
 

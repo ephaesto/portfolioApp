@@ -5,7 +5,7 @@ const FildTextarea = (field) => (
       <label htmlFor={field.name} className={field.classLabel}>{field.label}</label>
       <textarea  {...field.input}  className={field.classComponent}/>
       {field.meta.touched && field.meta.error &&
-       <p className="error">{field.meta.error}</p>}
+       <p className="error"><span class="badge badge-primary">erreur</span>{field.meta.error}</p>}
     </div>
   )
 
