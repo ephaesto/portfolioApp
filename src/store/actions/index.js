@@ -1,4 +1,4 @@
-import { SET_NAV_ENVIRONMENT,GET_LIST_TECHNO,GET_LIST_CREATION,GET_LIST_CREA_TO_TECH} from "./actionTypes"
+import { SET_NAV_ENVIRONMENT,GET_LIST_TECHNO,GET_LIST_CREATION,GET_LIST_CREA_TO_TECH,SUBMIT_EMAIL_CONTACT} from "./actionTypes"
 
 
 export function selectNavEnvironment(NavEnv){
@@ -24,5 +24,13 @@ export function getListCreation(){
 export function getListCreaToTech(){
   return{
     type : GET_LIST_CREA_TO_TECH
+  }
+}
+
+
+export function submitEmailContact(credentials){
+  console.log(credentials)
+  return{
+    type : SUBMIT_EMAIL_CONTACT
   }
 }

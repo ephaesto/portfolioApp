@@ -69,7 +69,7 @@ class Creation extends Component {
 
     return (
       <main>
-          <TitleMain title={typeof MyCreation !== "undefined" ? MyCreation.title : ""}  page='creation' />
+          <TitleMain title={ MyCreation.title }  page='creation' />
           <TitleAndOneOther
             classSection="creation presentationCrea bgwhit"
             classContainer ="container"
