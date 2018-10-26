@@ -81,7 +81,7 @@ class Creation extends Component {
             classSection="creation listeTechnoCrea"
             classContainer ="container"
             classCard="col-md-6 col-lg-4"
-            title="Les technologies choisis"
+            title="Les technologies choisies"
             listTechno={MyCreation.listTechno}
           />
           {links()}

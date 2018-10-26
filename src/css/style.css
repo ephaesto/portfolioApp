@@ -465,6 +465,7 @@ body .fromContact h2{
   text-align: center;
   letter-spacing: 0.09rem;
   padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 body .fromContact label{
@@ -518,6 +519,17 @@ body .fromContact  .container .error .badge-primary{
   margin-right: 0.65rem
 }
 
+body .alert {
+    border: 0;
+    border-radius: 0.65rem;
+}
+
+body .alert-success {
+    color: #ffa000;
+    background-color: #fff5d8;
+    border-color: #fff5d8;
+}
+
 body .MentionslegalesText {
   padding: 0.625rem;
 }
@@ -549,6 +561,7 @@ body .MentionslegalesText  a:active:hover{
   text-decoration: none;
 
 }
+
 
 @media (min-width: 600px){
   footer p{

@@ -1,4 +1,5 @@
 import axios from "axios"
+import {reset} from 'redux-form';
 import { SET_NAV_ENVIRONMENT,
   GET_LIST_TECHNO,
   GET_LIST_CREATION,
@@ -66,7 +67,7 @@ export function getListCreaToTech(){
 }
 
 
-export function submitEmailContact(email){
+export function submitEmailContact(email,history){
   return function(dispatch){
       axios.post(`${END_POINT}/api/contact/email`,
         {
@@ -76,13 +77,14 @@ export function submitEmailContact(email){
           message: email.message
         }
       ).then((response)=>{
-        const myData = {
-          name:"",
-          email:"",
-          subject:"",
-          message:""
-        }
-        dispatch({type :SUBMIT_EMAIL_CONTACT, payload : myData })
+        dispatch({type :SUBMIT_EMAIL_CONTACT, payload : email })
+        dispatch(reset("sendMailContact"))
+        localStorage.setItem("email","valide")
+        history.push("/contact")
+      }).catch(errors=>{
+        dispatch({type :SUBMIT_EMAIL_CONTACT, payload : email })
+        localStorage.setItem("email","unvalide")
+        history.push("/contact")
       })
     }
 }

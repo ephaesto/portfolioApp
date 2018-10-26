@@ -2,8 +2,8 @@ import { SET_NAV_ENVIRONMENT } from "../actions/actionTypes"
 
 const initialState =  [
     { name : "Bienvenue ", link : "/", id:1  } ,
-    { name : "Mes Compétence", link : "/competence", id:2 },
-    { name : "Mes Création", link : "/listCreation", id:3 },
+    { name : "Mes Compétences", link : "/competence", id:2 },
+    { name : "Mes Créations", link : "/listCreation", id:3 },
     { name : "Contactez-moi", link : "/contact", id:4 }
   ]
 

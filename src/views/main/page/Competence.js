@@ -45,13 +45,13 @@ class Competence extends Component {
     console.log(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech)
     return (
       <main>
-          <TitleMain title="Mes Compétence"  page='competence' />
+          <TitleMain title="Mes Compétences"  page='competence' />
           <ListTechno
             classSection =" listTechno backEnd"
             classContainer ="container"
             classTitle ="backEndTitle bgwhit titleTech"
             classCard ="col-md-6"
-            title ="Mes technologie Back-End"
+            title ="Mes technologies Back-End"
             listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,"Back-end")}
           />
           <ListTechno
@@ -59,7 +59,7 @@ class Competence extends Component {
             classContainer ="container"
             classTitle ="frontEndTitle bgwhit titleTech"
             classCard ="col-md-6"
-            title ="Mes technologie Front-End"
+            title ="Mes technologies Front-End"
             listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,"Front-end")}
           />
           <ListTechno
@@ -67,7 +67,7 @@ class Competence extends Component {
             classContainer ="container"
             classTitle ="webdesignTitle bgwhit titleTech"
             classCard ="col-md-6 col-lg-4 "
-            title ="Mes technologie pour le Webdesign"
+            title ="Mes technologies pour le Webdesign"
             listTechno ={this.StateListTechno(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,"Webdesign")}
           />
       </main>

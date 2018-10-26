@@ -18,7 +18,7 @@ class Accueil extends Component {
     let AccueilValues = this.props.AccueilValue
     return (
       <main>
-        <TitleMain title="Emeric Lebbrecht" subtitle="Bienvenu sur mon portfolio" page='accueil' />
+        <TitleMain title="Emeric Lebbrecht" subtitle="Bienvenue sur mon portfolio" page='accueil' />
         <ImageAndTexte
           classSection = "presentation accueil imgAndTextAvatar bgwhit"
           classContainer="container"
