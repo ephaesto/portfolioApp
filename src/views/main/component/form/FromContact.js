@@ -3,17 +3,8 @@
   import FieldInput from "./component/FieldInput"
   import FieldTextarea from "./component/FieldTextarea"
 
-  const FormContact = ({
-    classSection="",
-    classContainer="",
-    title="",
-    handleSubmit,
-    fieldsContact
-  }) => (
-    <section className={classSection}>
-      <div className={classContainer}>
-          <h2>{title}</h2>
-          <form onSubmit={handleSubmit()}>
+  const FormContact = ({fieldsContact}) => (
+        <React.Fragment>
               <Field
                   name={fieldsContact.name}
                   component={FieldInput}
@@ -47,9 +38,7 @@
                   classLabel={fieldsContact.message}
                 />
             <button type="submit" className="btn btn-primary btn-raised">Envoyer</button>
-          </form>
-        </div>
-    </section>
+        </React.Fragment>
   );
 
   export default FormContact;

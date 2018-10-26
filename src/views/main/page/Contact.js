@@ -13,21 +13,23 @@ import FromContact from '../component/form/FromContact'
 const FIELDS_CONTACT ={name:"name",email:"email",subject:"subject",message:"message"};
 
 class Contact extends Component {
-  handleSubmit = (credentials) =>{
-    this.props.submitEmailContact(credentials);
+  handleSubmit = (emailValue) =>{
+    this.props.submitEmailContact(emailValue);
   }
   render() {
     return (
       <main>
           <TitleMain title="Contactez-moi"  page='contact' />
-          <FromContact
-            classSection="fromContact bgwhit"
-            classContainer="container"
-            title="Envoyez-moi un message !"
-            handleSubmit={this.props.handleSubmit(this.handleSubmit)}
-            fieldsContact ={FIELDS_CONTACT}
-          />
-
+          <section className="fromContact bgwhit">
+            <div className="container">
+                <h2>Envoyez-moi un message !</h2>
+                <form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+                  <FromContact
+                    fieldsContact ={FIELDS_CONTACT}
+                  />
+                  </form>
+                </div>
+            </section>
       </main>
     );
   }

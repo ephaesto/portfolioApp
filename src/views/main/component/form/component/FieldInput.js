@@ -5,7 +5,7 @@ const FildInput = (field) => (
       <label htmlFor={field.name} className={field.classLabel}>{field.label}</label>
       <input {...field.input} type={field.type} className={field.classComponent}/>
       {field.meta.touched && field.meta.error &&
-       <p className="error"><span class="badge badge-primary">erreur</span>{field.meta.error}</p>}
+       <p className="error"><span className="badge badge-primary">erreur</span>{field.meta.error}</p>}
     </div>
   )
 

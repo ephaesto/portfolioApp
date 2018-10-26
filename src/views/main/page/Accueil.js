@@ -11,25 +11,11 @@ class Accueil extends Component {
 
   constructor(props) {
     super(props);
-    this.props.getAcceuil();
+    this.props.getAcceuil("1");
   }
 
   render() {
-    let AccueilValues = this.props.AccueilValue[0]
-    if(typeof AccueilValues === "undefined"){
-      AccueilValues = { id:"",
-        titlePresentation : "",
-        imgPresentation:"",
-        altImgPresentation:"",
-        titleMonPasse :"",
-        imgMonPasse:"",
-        altImgMonPasse:"",
-        textMonPasse:"",
-        titleMonAvenir :"",
-        imgMonAvenir:"",
-        altImgMonAvenir:"",
-        textMonAvenir:""
-      }}
+    let AccueilValues = this.props.AccueilValue
     return (
       <main>
         <TitleMain title="Emeric Lebbrecht" subtitle="Bienvenu sur mon portfolio" page='accueil' />

@@ -12,6 +12,7 @@ class Competence extends Component {
     this.props.getListTechno();
     this.props.getListCreation();
     this.props.getListCreaToTech();
+
   }
 
   StateListTechno = (listTechno,listLink,ListCreaToTech,type) => {
@@ -41,6 +42,7 @@ class Competence extends Component {
     return listTechnos
   }
   render() {
+    console.log(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech)
     return (
       <main>
           <TitleMain title="Mes Compétence"  page='competence' />
