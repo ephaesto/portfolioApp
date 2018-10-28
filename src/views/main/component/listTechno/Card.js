@@ -15,7 +15,8 @@ const Card = ({listTechno,classCard}) => (
                 <h3>{techno.name}</h3>
                 <p><strong>{techno.level}</strong></p>
                 <p>{techno.exemple}</p>
-                { typeof techno.listLink !== "undefined"  && techno.listLink !== null ? <ListLink listLinks={techno.listLink}/> : ""}
+                {console.log(techno.listLink)}
+                { typeof techno.listLink !== "undefined" && techno.listLink !== null ? <ListLink listLinks={techno.listLink}/> : ""}
               </div>
             </div>
           </div>
