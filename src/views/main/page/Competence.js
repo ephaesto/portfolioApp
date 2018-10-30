@@ -42,7 +42,6 @@ class Competence extends Component {
     return listTechnos
   }
   render() {
-    console.log(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech)
     return (
       <main>
           <TitleMain title="Mes Compétences"  page='competence' />
