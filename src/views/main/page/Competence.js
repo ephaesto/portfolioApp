@@ -7,12 +7,11 @@ import { getListTechno,getListCreation,getListCreaToTech } from '../../../store/
 import TitleMain from '../component/TitleMain'
 import ListTechno from '../component/listTechno/ListTechno'
 class Competence extends Component {
-  constructor(props) {
-    super(props);
+  
+  componentDidMount() {
     this.props.getListTechno();
     this.props.getListCreation();
     this.props.getListCreaToTech();
-
   }
 
   StateListTechno = (listTechno,listLink,ListCreaToTech,type) => {

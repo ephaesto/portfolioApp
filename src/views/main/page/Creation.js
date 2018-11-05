@@ -10,13 +10,12 @@ import TitleMain from '../component/TitleMain'
 import TitleAndOneOther from '../component/titleAndOneOther/TitleAndOneOther'
 
 class Creation extends Component {
-  constructor(props) {
-    super(props);
+
+  componentDidMount() {
     this.props.getListTechno();
     this.props.getListCreation();
     this.props.getListCreaToTech();
-  }
-
+ }
 
   StateListCreation = (listTechno,listCreation,ListCreaToTech,myId) => {
     let MyCreation = listCreation.filter((creation) => `${creation.id}` === myId)
@@ -47,16 +46,7 @@ class Creation extends Component {
 
   render() {
     let MyCreation = this.StateListCreation(this.props.listTechno,this.props.listCreation,this.props.listCreaToTech,this.props.match.params.id)
-    if(typeof MyCreation === "undefined"){
-      MyCreation = {
-        title:"",
-        name:"",
-        text:"",
-        listTechno:[],
-        link:null,
-        git:null
-      }
-    }
+
     let links = () =>{return ""};
     if(MyCreation.link !== null || MyCreation.git !== null){
       links = () =>{return (<TitleAndOneOther

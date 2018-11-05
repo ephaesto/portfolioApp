@@ -19,7 +19,7 @@ const ImageAndTexte = ({
     <div className={classContainer}>
       <div className={classRow}>
         <div className={classImg}>
-          <img src={img} alt={altImg}/>
+          <img src={img ? require(`../../../img/${img}`):""} alt={altImg}/>
         </div>
         <div className={classText}>
           <h2>{title}</h2>

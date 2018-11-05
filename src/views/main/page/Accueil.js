@@ -9,10 +9,10 @@ import ImageAndTexte from '../component/ImageAndTexte'
 
 class Accueil extends Component {
 
-  constructor(props) {
-    super(props);
+
+  componentDidMount() {
     this.props.getAcceuil("1");
-  }
+ }
 
   render() {
     let AccueilValues = this.props.AccueilValue

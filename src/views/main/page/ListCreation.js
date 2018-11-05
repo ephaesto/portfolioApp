@@ -12,10 +12,9 @@ import ImageAndTexte from '../component/ImageAndTexte'
 
 class ListCreation extends Component {
 
-  constructor(props) {
-    super(props);
+  componentDidMount() {
     this.props.getListCreation();
-  }
+ }
 
   render() {
     return (

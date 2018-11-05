@@ -9,7 +9,7 @@ const Card = ({listTechno,classCard}) => (
           <div className={`contentMyCard ${classCard}`}  key={techno.id}>
             <div className="myCard flexCenter" >
               <div className="part1">
-                <img src={techno.img} alt={techno.imgAlt}/>
+                <img src={require(`../../../../img/${techno.img}`)} alt={techno.imgAlt}/>
               </div>
               <div className="part2 flexCenter">
                 <h3>{techno.name}</h3>
